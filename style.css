@@ -28,11 +28,11 @@ body{
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
+
 .logo{
-    font-size: 25px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
+    height: 67px;
+    width: 67px;
+    position: relative;
 }
 .navbar a{
     font-size: 25px;
