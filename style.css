@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+*{
+    margin: 10px;
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body{
+    background: hsl(205, 67%, 10%);
+    color: #ededed;
+}
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 90%;
+    height: 10%;
+    padding: 20px 10%;
+/*     background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.logo{
+    height: 67px;
+    width: 67px;
+    border: 2px solid #00abf0;  
+    border-radius: 50%;
+    
+}
+.navbar a{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+.search{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10%;
+}
+.search-content{
+    max-width: 600px;
+    text-align: center;
+}
+.search-content h1{
+    font-size: 56px;
+    font-weight: 700;
+}
+.search-content form{
+    margin-top: 30px;
+}
+.search-content input[type="text"]{
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    background: #081b29;
+    color: #ededed;
+}
+.search-content button{
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #081b29;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+}
+.btn-box a:hover{
+    color: #00abf0;
+}
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box a:hover:before{
+    width: 100%;
+}
+
+
+.new{
+    display: none;
+    height: 33px;
+    width: 150px;
+    background: #081b29;
+    position: absolute;
+    left: 253px;
+    top: 17px;
+    border: 2px solid #00abf0;
+    transition: opacity 1s ease-in-out;
+    
+
+}
+.sehaj{
+    font-size: 18px;
+    position: absolute;
+    top: 0px;
+    font-style: italic;
+    
+}
+.en:hover + .new{
+    display: block;
+    opacity: 1;
+
+}

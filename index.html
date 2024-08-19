@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Sehaj</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .notification {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="en"><img src="Logo.png" class="logo"></a>
+        <div class="new"><div class="sehaj">Mr. Sehaj</div></div>
+        
+        <nav class="navbar">
+            <a href="https://mail.google.com/mail/&ogbl"><i class='bx bxl-gmail'></i></a>
+            <a href="https://www.youtube.com/?authuser=0"><i class='bx bxl-youtube'></i></a>
+            <a href="Contact.html"><i class='bx bxs-user-circle'></i></a>
+        </nav>
+    </header>
+
+    <section class="search">
+        <div class="search-content">
+            <h1>Press Enter To Search</h1>
+            <form action="https://www.google.com/search" method="GET">
+                <input type="text" name="q" id="query" placeholder="Search..." required>
+                
+            </form>
+        </div>
+    </section>
+
+    <div class="notification" id="notification">Press / to focus on the search box</div>
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            const queryInput = document.getElementById('query');
+            const isAlphabet = /^[a-zA-Z]$/.test(event.key);
+
+            if (isAlphabet && document.activeElement !== queryInput) {
+                showNotification();
+            }
+
+            if (event.key === '/') {
+                event.preventDefault();
+                queryInput.focus();
+            }
+        });
+
+        function showNotification() {
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
